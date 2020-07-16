@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<header th:insert="blocks/header :: header"></header>
+
+<!--        <p th:text="'Привет, ' + ${title} + '!'" />         -->
+
+<div class="container mt-5">
+    <h1 th:text="${title}"/>
+</div>
+
+<!--
+<div>
+<div data-test-id="homefeed-feed" class="zI7 iyn Hsu" style="padding-bottom:24px"><div class="gridCentered"><style>.gridCentered {
+    margin-left: auto;
+    margin-right: auto;
+}
+.gridCentered .static,
+.gridCentered .Masonry-Premount .Collection-Item {
+    position: absolute;
+    visibility: hidden;
+}
+.gridCentered .Masonry-Premount,
+.gridCentered .Masonry-Premount .AutoSizer,
+.gridCentered .Masonry-Premount .Collection {
+    width: auto !important;
+}
+
+@media (min-width: 0px) and (max-width: 755px) {
+    .gridCentered {
+        width: 504px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+2),
+    .gridCentered .static:nth-child(-n+2) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 756px) and (max-width: 1007px) {
+    .gridCentered {
+        width: 756px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+3),
+    .gridCentered .static:nth-child(-n+3) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 1008px) and (max-width: 1259px) {
+    .gridCentered {
+        width: 1008px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+4),
+    .gridCentered .static:nth-child(-n+4) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 1260px) and (max-width: 1511px) {
+    .gridCentered {
+        width: 1260px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+5),
+    .gridCentered .static:nth-child(-n+5) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 1512px) and (max-width: 1763px) {
+    .gridCentered {
+        width: 1512px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+6),
+    .gridCentered .static:nth-child(-n+6) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 1764px) and (max-width: 2015px) {
+    .gridCentered {
+        width: 1764px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+7),
+    .gridCentered .static:nth-child(-n+7) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 2016px) and (max-width: 2267px) {
+    .gridCentered {
+        width: 2016px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+8),
+    .gridCentered .static:nth-child(-n+8) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 2268px) and (max-width: 2519px) {
+    .gridCentered {
+        width: 2268px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+9),
+    .gridCentered .static:nth-child(-n+9) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 2520px) and (max-width: 2771px) {
+    .gridCentered {
+        width: 2520px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+10),
+    .gridCentered .static:nth-child(-n+10) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 2772px) and (max-width: 3023px) {
+    .gridCentered {
+        width: 2772px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+11),
+    .gridCentered .static:nth-child(-n+11) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 3024px) and (max-width: 3275px) {
+    .gridCentered {
+        width: 3024px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+12),
+    .gridCentered .static:nth-child(-n+12) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 3276px) and (max-width: 3527px) {
+    .gridCentered {
+        width: 3276px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+13),
+    .gridCentered .static:nth-child(-n+13) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 3528px) and (max-width: 3779px) {
+    .gridCentered {
+        width: 3528px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+14),
+    .gridCentered .static:nth-child(-n+14) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 3780px) and (max-width: 4031px) {
+    .gridCentered {
+        width: 3780px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+15),
+    .gridCentered .static:nth-child(-n+15) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 4032px) and (max-width: 4283px) {
+    .gridCentered {
+        width: 4032px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+16),
+    .gridCentered .static:nth-child(-n+16) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 4284px) and (max-width: 4535px) {
+    .gridCentered {
+        width: 4284px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+17),
+    .gridCentered .static:nth-child(-n+17) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 4536px) and (max-width: 4787px) {
+    .gridCentered {
+        width: 4536px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+18),
+    .gridCentered .static:nth-child(-n+18) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 4788px) and (max-width: 5039px) {
+    .gridCentered {
+        width: 4788px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+19),
+    .gridCentered .static:nth-child(-n+19) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 5040px) and (max-width: 5291px) {
+    .gridCentered {
+        width: 5040px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+20),
+    .gridCentered .static:nth-child(-n+20) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 5292px) and (max-width: 5543px) {
+    .gridCentered {
+        width: 5292px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+21),
+    .gridCentered .static:nth-child(-n+21) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 5544px) and (max-width: 5795px) {
+    .gridCentered {
+        width: 5544px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+22),
+    .gridCentered .static:nth-child(-n+22) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}
+
+@media (min-width: 5796px) and (max-width: 6047px) {
+    .gridCentered {
+        width: 5796px;
+    }
+    .gridCentered .Masonry-Premount .Collection-Item:nth-child(-n+23),
+    .gridCentered .static:nth-child(-n+23) {
+        position: static !important;
+        visibility: visible !important;
+        float: left;
+        display: block;
+    }
+}</style><div><div style="width: 100%;"><div class="vbI XiG" style="height: 2010px; width: 1260px;"><div class="Yl- MIw Hb7" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(0px) translateY(0px); width: 252px; height: 258px;"><div style="padding-bottom: 16px; padding-left: 8px; padding-right: 8px;"><div data-test-id="pin" data-test-pin-id="356206651781485207"><div class="zI7 iyn Hsu"><div data-test-id="pinWrapper" class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="zI7 iyn Hsu"><a data-force-refresh="1" href="/pin/356206651781485207/" rel="" style="cursor: zoom-in; display: block;"><div class="Pj7 sLG XiG eEj m1e"><div data-test-id="pinrep-image" class="zI7 iyn Hsu" style="min-height: 55px;"><div class="Jea gjz zI7 iyn Hsu" style="min-height: 120px;"><div class="ujU zI7 iyn Hsu"><div class=""><div class="zI7 iyn Hsu"><div class="XiG zI7 iyn Hsu" style="background-color: rgb(210, 208, 206); padding-bottom: 92.3729%;"><img alt=" " class="hCL kVc L4E MIw" importance="auto" loading="auto" src="https://i.pinimg.com/236x/99/44/9b/99449bc0cde1505de04da7272fee13dd.jpg" srcset="https://i.pinimg.com/236x/99/44/9b/99449bc0cde1505de04da7272fee13dd.jpg 1x, https://i.pinimg.com/474x/99/44/9b/99449bc0cde1505de04da7272fee13dd.jpg 2x, https://i.pinimg.com/736x/99/44/9b/99449bc0cde1505de04da7272fee13dd.jpg 3x, https://i.pinimg.com/originals/99/44/9b/99449bc0cde1505de04da7272fee13dd.png 4x"></div></div></div></div></div></div><div class="KPc MIw ojN Rym p6V QLY"></div></div></a></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="Gd1 VxL hjj n9m zI7 iyn Hsu"></div></div></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="JME MIw Rym fma ojN zI7 iyn Hsu"></div></div></div></div><div data-test-id="pointer-events-wrapper" style="pointer-events: auto;"><div class="zI7 iyn Hsu" style="padding: 8px 6px 16px;"><div class="Jea zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"><div class="Jea gjz zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"></div></div></div></div></div></div></div></div></div></div></div><div class="Yl- MIw Hb7" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(252px) translateY(0px); width: 252px; height: 459px;"><div style="padding-bottom: 16px; padding-left: 8px; padding-right: 8px;"><div data-test-id="pin" data-test-pin-id="397794579591598643"><div class="zI7 iyn Hsu"><div data-test-id="pinWrapper" class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="zI7 iyn Hsu"><a data-force-refresh="1" href="/pin/397794579591598643/" rel="" style="cursor: zoom-in; display: block;"><div class="Pj7 sLG XiG eEj m1e"><div data-test-id="pinrep-image" class="zI7 iyn Hsu" style="min-height: 55px;"><div class="Jea gjz zI7 iyn Hsu" style="min-height: 120px;"><div class="ujU zI7 iyn Hsu"><div class=""><div class="zI7 iyn Hsu"><div class="XiG zI7 iyn Hsu" style="background-color: rgb(0, 0, 0); padding-bottom: 177.542%;"><img alt=" " class="hCL kVc L4E MIw" importance="auto" loading="auto" src="https://i.pinimg.com/236x/24/c5/62/24c56222823c5b4214cd28ba4fbd11e0.jpg" srcset="https://i.pinimg.com/236x/24/c5/62/24c56222823c5b4214cd28ba4fbd11e0.jpg 1x, https://i.pinimg.com/474x/24/c5/62/24c56222823c5b4214cd28ba4fbd11e0.jpg 2x, https://i.pinimg.com/736x/24/c5/62/24c56222823c5b4214cd28ba4fbd11e0.jpg 3x, https://i.pinimg.com/originals/24/c5/62/24c56222823c5b4214cd28ba4fbd11e0.jpg 4x"></div></div></div></div></div></div><div class="KPc MIw ojN Rym p6V QLY"></div></div></a></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="Gd1 VxL hjj n9m zI7 iyn Hsu"></div></div></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="JME MIw Rym fma ojN zI7 iyn Hsu"></div></div></div></div><div data-test-id="pointer-events-wrapper" style="pointer-events: auto;"><div class="zI7 iyn Hsu" style="padding: 8px 6px 16px;"><div class="Jea zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"><div class="Jea gjz zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"></div></div></div></div></div></div></div></div></div></div></div><div class="Yl- MIw Hb7" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(504px) translateY(0px); width: 252px; height: 459px;"><div style="padding-bottom: 16px; padding-left: 8px; padding-right: 8px;"><div data-test-id="pin" data-test-pin-id="353040058294955122"><div class="zI7 iyn Hsu"><div data-test-id="pinWrapper" class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="zI7 iyn Hsu"><a data-force-refresh="1" href="/pin/353040058294955122/" rel="" style="cursor: zoom-in; display: block;"><div class="Pj7 sLG XiG eEj m1e"><div data-test-id="pinrep-image" class="zI7 iyn Hsu" style="min-height: 55px;"><div class="Jea gjz zI7 iyn Hsu" style="min-height: 120px;"><div class="ujU zI7 iyn Hsu"><div class=""><div class="zI7 iyn Hsu"><div class="XiG zI7 iyn Hsu" style="background-color: rgb(56, 45, 36); padding-bottom: 177.542%;"><img alt=" " class="hCL kVc L4E MIw" importance="auto" loading="auto" src="https://i.pinimg.com/236x/fc/6b/30/fc6b30513bff4bd69909baf9239bc67f.jpg" srcset="https://i.pinimg.com/236x/fc/6b/30/fc6b30513bff4bd69909baf9239bc67f.jpg 1x, https://i.pinimg.com/474x/fc/6b/30/fc6b30513bff4bd69909baf9239bc67f.jpg 2x, https://i.pinimg.com/736x/fc/6b/30/fc6b30513bff4bd69909baf9239bc67f.jpg 3x, https://i.pinimg.com/originals/fc/6b/30/fc6b30513bff4bd69909baf9239bc67f.png 4x"></div></div></div></div></div></div><div class="KPc MIw ojN Rym p6V QLY"></div></div></a></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="Gd1 VxL hjj n9m zI7 iyn Hsu"></div></div></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="JME MIw Rym fma ojN zI7 iyn Hsu"></div></div></div></div><div data-test-id="pointer-events-wrapper" style="pointer-events: auto;"><div class="zI7 iyn Hsu" style="padding: 8px 6px 16px;"><div class="Jea zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"><div class="Jea gjz zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"></div></div></div></div></div></div></div></div></div></div></div><div class="Yl- MIw Hb7" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(756px) translateY(0px); width: 252px; height: 476px;"><div style="padding-bottom: 16px; padding-left: 8px; padding-right: 8px;"><div data-test-id="pin" data-test-pin-id="644999977873716059"><div class="zI7 iyn Hsu"><div data-test-id="pinWrapper" class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="zI7 iyn Hsu"><a data-force-refresh="1" href="/pin/644999977873716059/" rel="" style="cursor: zoom-in; display: block;"><div class="Pj7 sLG XiG eEj m1e"><div data-test-id="pinrep-image" class="zI7 iyn Hsu" style="min-height: 55px;"><div class="Jea gjz zI7 iyn Hsu" style="min-height: 120px;"><div class="ujU zI7 iyn Hsu"><div class=""><div class="zI7 iyn Hsu"><div class="XiG zI7 iyn Hsu" style="background-color: rgb(255, 255, 255); padding-bottom: 184.746%;"><img alt=" " class="hCL kVc L4E MIw" importance="auto" loading="auto" src="https://i.pinimg.com/236x/8d/3e/d3/8d3ed3b3908a326a60e40e480fad29c7.jpg" srcset="https://i.pinimg.com/236x/8d/3e/d3/8d3ed3b3908a326a60e40e480fad29c7.jpg 1x, https://i.pinimg.com/474x/8d/3e/d3/8d3ed3b3908a326a60e40e480fad29c7.jpg 2x, https://i.pinimg.com/736x/8d/3e/d3/8d3ed3b3908a326a60e40e480fad29c7.jpg 3x, https://i.pinimg.com/originals/8d/3e/d3/8d3ed3b3908a326a60e40e480fad29c7.png 4x"></div></div></div></div></div></div><div class="KPc MIw ojN Rym p6V QLY"></div></div></a></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="Gd1 VxL hjj n9m zI7 iyn Hsu"></div></div></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="JME MIw Rym fma ojN zI7 iyn Hsu"></div></div></div></div><div data-test-id="pointer-events-wrapper" style="pointer-events: auto;"><div class="zI7 iyn Hsu" style="padding: 8px 6px 16px;"><div class="Jea zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"><div class="Jea gjz zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"></div></div></div></div></div></div></div></div></div></div></div><div class="Yl- MIw Hb7" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(1008px) translateY(0px); width: 252px; height: 417px;"><div style="padding-bottom: 16px; padding-left: 8px; padding-right: 8px;"><div data-test-id="pin" data-test-pin-id="696650636099759467"><div class="zI7 iyn Hsu"><div data-test-id="pinWrapper" class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="zI7 iyn Hsu"><a data-force-refresh="1" href="/pin/696650636099759467/" rel="" style="cursor: zoom-in; display: block;"><div class="Pj7 sLG XiG eEj m1e"><div data-test-id="pinrep-image" class="zI7 iyn Hsu" style="min-height: 55px;"><div class="Jea gjz zI7 iyn Hsu" style="min-height: 120px;"><div class="ujU zI7 iyn Hsu"><div class=""><div class="zI7 iyn Hsu"><div class="XiG zI7 iyn Hsu" style="background-color: rgb(146, 47, 52); padding-bottom: 159.746%;"><img alt=" " class="hCL kVc L4E MIw" importance="auto" loading="auto" src="https://i.pinimg.com/236x/d9/97/20/d997208f0966237e213ae6e03692e299.jpg" srcset="https://i.pinimg.com/236x/d9/97/20/d997208f0966237e213ae6e03692e299.jpg 1x, https://i.pinimg.com/474x/d9/97/20/d997208f0966237e213ae6e03692e299.jpg 2x, https://i.pinimg.com/736x/d9/97/20/d997208f0966237e213ae6e03692e299.jpg 3x, https://i.pinimg.com/originals/d9/97/20/d997208f0966237e213ae6e03692e299.jpg 4x"></div></div></div></div></div></div><div class="KPc MIw ojN Rym p6V QLY"></div></div></a></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="Gd1 VxL hjj n9m zI7 iyn Hsu"></div></div></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="JME MIw Rym fma ojN zI7 iyn Hsu"></div></div></div></div><div data-test-id="pointer-events-wrapper" style="pointer-events: auto;"><div class="zI7 iyn Hsu" style="padding: 8px 6px 16px;"><div class="Jea zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"><div class="Jea gjz zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"></div></div></div></div></div></div></div></div></div></div></div><div class="Yl- MIw Hb7" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(0px) translateY(258px); width: 252px; height: 483px;"><div style="padding-bottom: 16px; padding-left: 8px; padding-right: 8px;"><div data-test-id="pin" data-test-pin-id="497507090092535086"><div class="zI7 iyn Hsu"><div data-test-id="pinWrapper" class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="zI7 iyn Hsu"><a data-force-refresh="1" href="/pin/497507090092535086/" rel="" style="cursor: zoom-in; display: block;"><div class="Pj7 sLG XiG eEj m1e"><div data-test-id="pinrep-video" class="zI7 iyn Hsu"><div class="zI7 iyn Hsu"><div><div class="iCM XiG L4E o5r" style="padding-bottom: 177.778%; height: 0px;"><style>.__gestaltThemeVideo {
+    --gestalt-colorRed0: #ff5247;
+    --gestalt-colorRed100: #e60023;
+    --gestalt-colorGray0: #fff;
+    --gestalt-colorGray50: #fff;
+    --gestalt-colorGray100: #efefef;
+    --gestalt-colorGray150: #ddd;
+    --gestalt-colorGray200: #767676;
+    --gestalt-colorGray300: #111;
+    --gestalt-colorGray400: #000;
+}</style><div class="__gestaltThemeVideo"><video poster="https://i.pinimg.com/236x/a3/3d/07/a33d074b4d0e0cb0e8e83e44519ffb0c.jpg" preload="auto" src="blob:https://www.pinterest.ru/7a299261-8312-47b9-b598-63f2cce1c765" class="hwa kVc MIw L4E"><track kind="captions" src=""></video></div></div></div></div></div><div class="KPc MIw ojN Rym p6V QLY"></div></div></a></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="Gd1 VxL hjj n9m zI7 iyn Hsu"><div data-test-id="PinTypeIdentifier" class="FNs zI7 iyn Hsu" style="background-color: rgba(255, 255, 255, 0.8); border-radius: 18px; color: rgb(17, 17, 17); font-size: 10px; font-weight: 600; height: 24px; line-height: 24px; padding: 0px 6px;">1:00</div></div></div></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="JME MIw Rym fma ojN zI7 iyn Hsu"></div></div></div></div><div data-test-id="pointer-events-wrapper" style="pointer-events: auto;"><div class="zI7 iyn Hsu" style="padding: 8px 6px 16px;"><div class="Jea zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"><div class="Jea gjz zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"></div></div><div class="zI7 iyn Hsu"><a href="/pin/497507090092535086/" rel=""><div class="Jea gjz hUC hs0 zI7 iyn Hsu" style="height: 19px;"><div class="Jea hs0 zI7 iyn Hsu"><div class="zI7 iyn Hsu" style="margin-right: 2px;"><div class="zI7 iyn Hsu" style="width: 17px; height: 17px; background-image: url(&quot;https://s.pinimg.com/webapp/style/images/love-ea9221bd.svg&quot;); background-repeat: no-repeat; background-size: cover;"></div></div><div class="zI7 iyn Hsu" style="margin-right: 2px;"><div class="zI7 iyn Hsu" style="width: 17px; height: 17px; background-image: url(&quot;https://s.pinimg.com/webapp/style/images/goodIdea-cb4b8beb.svg&quot;); background-repeat: no-repeat; background-size: cover;"></div></div><div class="zI7 iyn Hsu" style="margin-right: 2px;"><div class="zI7 iyn Hsu" style="width: 17px; height: 17px; background-image: url(&quot;https://s.pinimg.com/webapp/style/images/wow-c68810b1.svg&quot;); background-repeat: no-repeat; background-size: cover;"></div></div></div><div class="Shl zI7 iyn Hsu"><div class="tBJ dyH iFc MF7 pBj DrD IZT swG">1&nbsp;тыс.</div></div></div></a></div></div></div></div></div></div></div></div></div></div><div class="Yl- MIw Hb7" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(1008px) translateY(417px); width: 252px; height: 367px;"><div style="padding-bottom: 16px; padding-left: 8px; padding-right: 8px;"><div data-test-id="pin" data-test-pin-id="858428378965640933"><div class="zI7 iyn Hsu"><div data-test-id="pinWrapper" class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="zI7 iyn Hsu"><a data-force-refresh="1" href="/pin/858428378965640933/" rel="" style="cursor: zoom-in; display: block;"><div class="Pj7 sLG XiG eEj m1e"><div data-test-id="pinrep-image" class="zI7 iyn Hsu" style="min-height: 55px;"><div class="Jea gjz zI7 iyn Hsu" style="min-height: 120px;"><div class="ujU zI7 iyn Hsu"><div class=""><div class="zI7 iyn Hsu"><div class="XiG zI7 iyn Hsu" style="background-color: rgb(223, 221, 225); padding-bottom: 138.559%;"><img alt=" " class="hCL kVc L4E MIw" importance="auto" loading="auto" src="https://i.pinimg.com/236x/f4/58/e9/f458e97c7fe4a5c26e404d0c91dcba9d.jpg" srcset="https://i.pinimg.com/236x/f4/58/e9/f458e97c7fe4a5c26e404d0c91dcba9d.jpg 1x, https://i.pinimg.com/474x/f4/58/e9/f458e97c7fe4a5c26e404d0c91dcba9d.jpg 2x, https://i.pinimg.com/736x/f4/58/e9/f458e97c7fe4a5c26e404d0c91dcba9d.jpg 3x, https://i.pinimg.com/originals/f4/58/e9/f458e97c7fe4a5c26e404d0c91dcba9d.jpg 4x"></div></div></div></div></div></div><div class="KPc MIw ojN Rym p6V QLY"></div></div></a></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="Gd1 VxL hjj n9m zI7 iyn Hsu"></div></div></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="JME MIw Rym fma ojN zI7 iyn Hsu"></div></div></div></div><div data-test-id="pointer-events-wrapper" style="pointer-events: auto;"><div class="zI7 iyn Hsu" style="padding: 8px 6px 16px;"><div class="Jea zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"><div class="Jea gjz zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"></div></div></div></div></div></div></div></div></div></div></div><div class="Yl- MIw Hb7" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(252px) translateY(459px); width: 252px; height: 394px;"><div style="padding-bottom: 16px; padding-left: 8px; padding-right: 8px;"><div data-test-id="pin" data-test-pin-id="589619776207216900"><div class="zI7 iyn Hsu"><div data-test-id="pinWrapper" class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="zI7 iyn Hsu"><a data-force-refresh="1" href="/pin/589619776207216900/" rel="" style="cursor: zoom-in; display: block;"><div class="Pj7 sLG XiG eEj m1e"><div data-test-id="pinrep-image" class="zI7 iyn Hsu" style="min-height: 55px;"><div class="Jea gjz zI7 iyn Hsu" style="min-height: 120px;"><div class="ujU zI7 iyn Hsu"><div class=""><div class="zI7 iyn Hsu"><div class="XiG zI7 iyn Hsu" style="background-color: rgb(185, 174, 164); padding-bottom: 150%;"><img alt="Позитивная парочка" class="hCL kVc L4E MIw" importance="auto" loading="auto" src="https://i.pinimg.com/236x/b9/94/1f/b9941f8dd61c67d8d8db27ac775d595d.jpg" srcset="https://i.pinimg.com/236x/b9/94/1f/b9941f8dd61c67d8d8db27ac775d595d.jpg 1x, https://i.pinimg.com/474x/b9/94/1f/b9941f8dd61c67d8d8db27ac775d595d.jpg 2x, https://i.pinimg.com/736x/b9/94/1f/b9941f8dd61c67d8d8db27ac775d595d.jpg 3x, https://i.pinimg.com/originals/b9/94/1f/b9941f8dd61c67d8d8db27ac775d595d.jpg 4x"></div></div></div></div></div></div><div class="KPc MIw ojN Rym p6V QLY"></div></div></a></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="Gd1 VxL hjj n9m zI7 iyn Hsu"></div></div></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="JME MIw Rym fma ojN zI7 iyn Hsu"></div></div></div></div><div data-test-id="pointer-events-wrapper" style="pointer-events: auto;"><div class="zI7 iyn Hsu" style="padding: 8px 6px 16px;"><div class="Jea zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"><div class="Jea gjz zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"></div></div></div></div></div></div></div></div></div></div></div><div class="Yl- MIw Hb7" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(504px) translateY(459px); width: 252px; height: 459px;"><div style="padding-bottom: 16px; padding-left: 8px; padding-right: 8px;"><div data-test-id="pin" data-test-pin-id="745486544560153241"><div class="zI7 iyn Hsu"><div data-test-id="pinWrapper" class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="zI7 iyn Hsu"><a data-force-refresh="1" href="/pin/745486544560153241/" rel="" style="cursor: zoom-in; display: block;"><div class="Pj7 sLG XiG eEj m1e"><div data-test-id="pinrep-image" class="zI7 iyn Hsu" style="min-height: 55px;"><div class="Jea gjz zI7 iyn Hsu" style="min-height: 120px;"><div class="ujU zI7 iyn Hsu"><div class=""><div class="zI7 iyn Hsu"><div class="XiG zI7 iyn Hsu" style="background-color: rgb(8, 7, 11); padding-bottom: 177.542%;"><img alt=" " class="hCL kVc L4E MIw" importance="auto" loading="auto" src="https://i.pinimg.com/236x/b1/8d/9e/b18d9ed77f927239997dfb13a0ab3603.jpg" srcset="https://i.pinimg.com/236x/b1/8d/9e/b18d9ed77f927239997dfb13a0ab3603.jpg 1x, https://i.pinimg.com/474x/b1/8d/9e/b18d9ed77f927239997dfb13a0ab3603.jpg 2x, https://i.pinimg.com/736x/b1/8d/9e/b18d9ed77f927239997dfb13a0ab3603.jpg 3x, https://i.pinimg.com/originals/b1/8d/9e/b18d9ed77f927239997dfb13a0ab3603.png 4x"></div></div></div></div></div></div><div class="KPc MIw ojN Rym p6V QLY"></div></div></a></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="Gd1 VxL hjj n9m zI7 iyn Hsu"></div></div></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="JME MIw Rym fma ojN zI7 iyn Hsu"></div></div></div></div><div data-test-id="pointer-events-wrapper" style="pointer-events: auto;"><div class="zI7 iyn Hsu" style="padding: 8px 6px 16px;"><div class="Jea zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"><div class="Jea gjz zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"></div></div></div></div></div></div></div></div></div></div></div><div class="Yl- MIw Hb7" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(756px) translateY(476px); width: 252px; height: 481px;"><div style="padding-bottom: 16px; padding-left: 8px; padding-right: 8px;"><div data-test-id="pin" data-test-pin-id="859976491336741978"><div class="zI7 iyn Hsu"><div data-test-id="pinWrapper" class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="zI7 iyn Hsu"><a data-force-refresh="1" href="/pin/859976491336741978/" rel="" style="cursor: zoom-in; display: block;"><div class="Pj7 sLG XiG eEj m1e"><div data-test-id="pinrep-image" class="zI7 iyn Hsu" style="min-height: 55px;"><div class="Jea gjz zI7 iyn Hsu" style="min-height: 120px;"><div class="ujU zI7 iyn Hsu"><div class=""><div class="zI7 iyn Hsu"><div class="XiG zI7 iyn Hsu" style="background-color: rgb(106, 110, 96); padding-bottom: 186.864%;"><img alt=" " class="hCL kVc L4E MIw" importance="auto" loading="auto" src="https://i.pinimg.com/236x/3e/49/8c/3e498c1a89f0fdbcdf0a2cf93fb967d7.jpg" srcset="https://i.pinimg.com/236x/3e/49/8c/3e498c1a89f0fdbcdf0a2cf93fb967d7.jpg 1x, https://i.pinimg.com/474x/3e/49/8c/3e498c1a89f0fdbcdf0a2cf93fb967d7.jpg 2x, https://i.pinimg.com/736x/3e/49/8c/3e498c1a89f0fdbcdf0a2cf93fb967d7.jpg 3x, https://i.pinimg.com/originals/3e/49/8c/3e498c1a89f0fdbcdf0a2cf93fb967d7.jpg 4x"></div></div></div></div></div></div><div class="KPc MIw ojN Rym p6V QLY"></div></div></a></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="Gd1 VxL hjj n9m zI7 iyn Hsu"></div></div></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="JME MIw Rym fma ojN zI7 iyn Hsu"></div></div></div></div><div data-test-id="pointer-events-wrapper" style="pointer-events: auto;"><div class="zI7 iyn Hsu" style="padding: 8px 6px 16px;"><div class="Jea zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"><div class="Jea gjz zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"></div></div></div></div></div></div></div></div></div></div></div><div class="Yl- MIw Hb7" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(0px) translateY(741px); width: 252px; height: 394px;"><div style="padding-bottom: 16px; padding-left: 8px; padding-right: 8px;"><div data-test-id="pin" data-test-pin-id="636837203550763591"><div class="zI7 iyn Hsu"><div data-test-id="pinWrapper" class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="zI7 iyn Hsu"><a data-force-refresh="1" href="/pin/636837203550763591/" rel="" style="cursor: zoom-in; display: block;"><div class="Pj7 sLG XiG eEj m1e"><div data-test-id="pinrep-image" class="zI7 iyn Hsu" style="min-height: 55px;"><div class="Jea gjz zI7 iyn Hsu" style="min-height: 120px;"><div class="ujU zI7 iyn Hsu"><div class=""><div class="zI7 iyn Hsu"><div class="XiG zI7 iyn Hsu" style="background-color: rgb(51, 51, 51); padding-bottom: 150%;"><img alt=" " class="hCL kVc L4E MIw" importance="auto" loading="auto" src="https://i.pinimg.com/236x/45/df/8c/45df8c85afddbde287b4386f4c869c42.jpg" srcset="https://i.pinimg.com/236x/45/df/8c/45df8c85afddbde287b4386f4c869c42.jpg 1x, https://i.pinimg.com/474x/45/df/8c/45df8c85afddbde287b4386f4c869c42.jpg 2x, https://i.pinimg.com/736x/45/df/8c/45df8c85afddbde287b4386f4c869c42.jpg 3x, https://i.pinimg.com/originals/45/df/8c/45df8c85afddbde287b4386f4c869c42.png 4x"></div></div></div></div></div></div><div class="KPc MIw ojN Rym p6V QLY"></div></div></a></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="Gd1 VxL hjj n9m zI7 iyn Hsu"></div></div></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="JME MIw Rym fma ojN zI7 iyn Hsu"></div></div></div></div><div data-test-id="pointer-events-wrapper" style="pointer-events: auto;"><div class="zI7 iyn Hsu" style="padding: 8px 6px 16px;"><div class="Jea zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"><div class="Jea gjz zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"></div></div></div></div></div></div></div></div></div></div></div><div class="Yl- MIw Hb7" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(1008px) translateY(784px); width: 252px; height: 410px;"><div style="padding-bottom: 16px; padding-left: 8px; padding-right: 8px;"><div data-test-id="pin" data-test-pin-id="631066966527947520"><div class="zI7 iyn Hsu"><div data-test-id="pinWrapper" class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="zI7 iyn Hsu"><a data-force-refresh="1" href="/pin/631066966527947520/" rel="" style="cursor: zoom-in; display: block;"><div class="Pj7 sLG XiG eEj m1e"><div data-test-id="pinrep-video" class="zI7 iyn Hsu"><div class="zI7 iyn Hsu"><div class="Jea gjz zI7 iyn Hsu" style="min-height: 120px;"><div class="ujU zI7 iyn Hsu"><div class=""><div class="zI7 iyn Hsu"><div class="XiG zI7 iyn Hsu" style="background-color: transparent; padding-bottom: 146.61%;"><img alt=" " class="hCL kVc L4E MIw" importance="auto" loading="auto" src="https://i.pinimg.com/236x/67/c9/b7/67c9b71395a839d4176ca3ac6edd0ecc.jpg" srcset="https://i.pinimg.com/236x/67/c9/b7/67c9b71395a839d4176ca3ac6edd0ecc.jpg 1x, https://i.pinimg.com/474x/67/c9/b7/67c9b71395a839d4176ca3ac6edd0ecc.jpg 2x, https://i.pinimg.com/736x/67/c9/b7/67c9b71395a839d4176ca3ac6edd0ecc.jpg 3x, https://i.pinimg.com/originals/67/c9/b7/67c9b71395a839d4176ca3ac6edd0ecc.jpg 4x"></div></div></div></div></div></div></div><div class="KPc MIw ojN Rym p6V QLY"></div></div></a></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="Gd1 VxL hjj n9m zI7 iyn Hsu"><div data-test-id="PinTypeIdentifier" class="FNs zI7 iyn Hsu" style="background-color: rgba(255, 255, 255, 0.8); border-radius: 18px; color: rgb(17, 17, 17); font-size: 10px; font-weight: 600; height: 24px; line-height: 24px; padding: 0px 6px;">0:12</div></div></div></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="JME MIw Rym fma ojN zI7 iyn Hsu"></div></div></div></div><div data-test-id="pointer-events-wrapper" style="pointer-events: auto;"><div class="zI7 iyn Hsu" style="padding: 8px 6px 16px;"><div class="Jea zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"><div class="Jea gjz zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"></div></div><div class="zI7 iyn Hsu"><a href="/pin/631066966527947520/" rel=""><div class="Jea gjz hUC hs0 zI7 iyn Hsu" style="height: 19px;"><div class="Jea hs0 zI7 iyn Hsu"><div class="zI7 iyn Hsu" style="margin-right: 2px;"><div class="zI7 iyn Hsu" style="width: 17px; height: 17px; background-image: url(&quot;https://s.pinimg.com/webapp/style/images/love-ea9221bd.svg&quot;); background-repeat: no-repeat; background-size: cover;"></div></div><div class="zI7 iyn Hsu" style="margin-right: 2px;"><div class="zI7 iyn Hsu" style="width: 17px; height: 17px; background-image: url(&quot;https://s.pinimg.com/webapp/style/images/goodIdea-cb4b8beb.svg&quot;); background-repeat: no-repeat; background-size: cover;"></div></div><div class="zI7 iyn Hsu" style="margin-right: 2px;"><div class="zI7 iyn Hsu" style="width: 17px; height: 17px; background-image: url(&quot;https://s.pinimg.com/webapp/style/images/wow-c68810b1.svg&quot;); background-repeat: no-repeat; background-size: cover;"></div></div></div><div class="Shl zI7 iyn Hsu"><div class="tBJ dyH iFc MF7 pBj DrD IZT swG">4,6&nbsp;тыс.</div></div></div></a></div></div></div></div></div></div></div></div></div></div><div class="Yl- MIw Hb7" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(252px) translateY(853px); width: 252px; height: 459px;"><div style="padding-bottom: 16px; padding-left: 8px; padding-right: 8px;"><div data-test-id="pin" data-test-pin-id="746190232002004870"><div class="zI7 iyn Hsu"><div data-test-id="pinWrapper" class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="zI7 iyn Hsu"><a data-force-refresh="1" href="/pin/746190232002004870/" rel="" style="cursor: zoom-in; display: block;"><div class="Pj7 sLG XiG eEj m1e"><div data-test-id="pinrep-image" class="zI7 iyn Hsu" style="min-height: 55px;"><div class="Jea gjz zI7 iyn Hsu" style="min-height: 120px;"><div class="ujU zI7 iyn Hsu"><div class=""><div class="zI7 iyn Hsu"><div class="XiG zI7 iyn Hsu" style="background-color: rgb(18, 55, 113); padding-bottom: 177.542%;"><img alt=" " class="hCL kVc L4E MIw" importance="auto" loading="auto" src="https://i.pinimg.com/236x/cc/a2/73/cca27329a2e3ffcc174d1f7c2cf9d910.jpg" srcset="https://i.pinimg.com/236x/cc/a2/73/cca27329a2e3ffcc174d1f7c2cf9d910.jpg 1x, https://i.pinimg.com/474x/cc/a2/73/cca27329a2e3ffcc174d1f7c2cf9d910.jpg 2x, https://i.pinimg.com/736x/cc/a2/73/cca27329a2e3ffcc174d1f7c2cf9d910.jpg 3x, https://i.pinimg.com/originals/cc/a2/73/cca27329a2e3ffcc174d1f7c2cf9d910.jpg 4x"></div></div></div></div></div></div><div class="KPc MIw ojN Rym p6V QLY"></div></div></a></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="Gd1 VxL hjj n9m zI7 iyn Hsu"></div></div></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="JME MIw Rym fma ojN zI7 iyn Hsu"></div></div></div></div><div data-test-id="pointer-events-wrapper" style="pointer-events: auto;"><div class="zI7 iyn Hsu" style="padding: 8px 6px 16px;"><div class="Jea zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"><div class="Jea gjz zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"></div></div></div></div></div></div></div></div></div></div></div><div class="Yl- MIw Hb7" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(504px) translateY(918px); width: 252px; height: 393px;"><div style="padding-bottom: 16px; padding-left: 8px; padding-right: 8px;"><div data-test-id="pin" data-test-pin-id="790663278323443036"><div class="zI7 iyn Hsu"><div data-test-id="pinWrapper" class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="zI7 iyn Hsu"><a data-force-refresh="1" href="/pin/790663278323443036/" rel="" style="cursor: zoom-in; display: block;"><div class="Pj7 sLG XiG eEj m1e"><div data-test-id="pinrep-image" class="zI7 iyn Hsu" style="min-height: 55px;"><div class="Jea gjz zI7 iyn Hsu" style="min-height: 120px;"><div class="ujU zI7 iyn Hsu"><div class=""><div class="zI7 iyn Hsu"><div class="XiG zI7 iyn Hsu" style="background-color: rgb(190, 174, 144); padding-bottom: 149.576%;"><img alt=" " class="hCL kVc L4E MIw" importance="auto" loading="auto" src="https://i.pinimg.com/236x/f5/74/a3/f574a33aa15704f38be8ef2e40060912.jpg" srcset="https://i.pinimg.com/236x/f5/74/a3/f574a33aa15704f38be8ef2e40060912.jpg 1x, https://i.pinimg.com/474x/f5/74/a3/f574a33aa15704f38be8ef2e40060912.jpg 2x, https://i.pinimg.com/736x/f5/74/a3/f574a33aa15704f38be8ef2e40060912.jpg 3x, https://i.pinimg.com/originals/f5/74/a3/f574a33aa15704f38be8ef2e40060912.jpg 4x"></div></div></div></div></div></div><div class="KPc MIw ojN Rym p6V QLY"></div></div></a></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="Gd1 VxL hjj n9m zI7 iyn Hsu"></div></div></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="JME MIw Rym fma ojN zI7 iyn Hsu"></div></div></div></div><div data-test-id="pointer-events-wrapper" style="pointer-events: auto;"><div class="zI7 iyn Hsu" style="padding: 8px 6px 16px;"><div class="Jea zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"><div class="Jea gjz zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"></div></div></div></div></div></div></div></div></div></div></div><div class="Yl- MIw Hb7" data-grid-item="true" style="top: 0px; left: 0px; transform: translateX(756px) translateY(957px); width: 252px; height: 276px;"><div style="padding-bottom: 16px; padding-left: 8px; padding-right: 8px;"><div data-test-id="pin" data-test-pin-id="811422057854531655"><div class="zI7 iyn Hsu"><div data-test-id="pinWrapper" class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="XiG sLG zI7 iyn Hsu" style="border-radius: 16px; -webkit-mask-image: -webkit-radial-gradient(center, white, black);"><div class="zI7 iyn Hsu"><a data-force-refresh="1" href="/pin/811422057854531655/" rel="" style="cursor: zoom-in; display: block;"><div class="Pj7 sLG XiG eEj m1e"><div data-test-id="pinrep-image" class="zI7 iyn Hsu" style="min-height: 55px;"><div class="Jea gjz zI7 iyn Hsu" style="min-height: 120px;"><div class="ujU zI7 iyn Hsu"><div class=""><div class="zI7 iyn Hsu"><div class="XiG zI7 iyn Hsu" style="background-color: rgb(97, 79, 64); padding-bottom: 100%;"><img alt=" " class="hCL kVc L4E MIw" importance="auto" loading="auto" src="https://i.pinimg.com/236x/d3/98/f4/d398f4701f1e9c725eb28da63764413b.jpg" srcset="https://i.pinimg.com/236x/d3/98/f4/d398f4701f1e9c725eb28da63764413b.jpg 1x, https://i.pinimg.com/474x/d3/98/f4/d398f4701f1e9c725eb28da63764413b.jpg 2x, https://i.pinimg.com/736x/d3/98/f4/d398f4701f1e9c725eb28da63764413b.jpg 3x, https://i.pinimg.com/originals/d3/98/f4/d398f4701f1e9c725eb28da63764413b.jpg 4x"></div></div></div></div></div></div><div class="KPc MIw ojN Rym p6V QLY"></div></div></a></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="Gd1 VxL hjj n9m zI7 iyn Hsu"></div></div></div><div class="zI7 iyn Hsu" style="opacity: 1;"><div class="MIw QLY Rym ojN p6V zI7 iyn Hsu" style="pointer-events: none;"><div class="JME MIw Rym fma ojN zI7 iyn Hsu"></div></div></div></div><div data-test-id="pointer-events-wrapper" style="pointer-events: auto;"><div class="zI7 iyn Hsu" style="padding: 8px 6px 16px;"><div class="Jea zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"><div class="Jea gjz zI7 iyn Hsu"><div class="ujU zI7 iyn Hsu"></div></div></div></div></div></div></div></div></div></div></div></div><div class="vbI XiG" style="width: 1260px;"></div></div></div></div><div class="zI7 iyn Hsu"></div></div>
+</div>
+-->
+
+<footer th:insert="blocks/footer :: footer"></footer>
+
+</body>
+</html>
