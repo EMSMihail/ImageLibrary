@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <title th:text="${title}"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -171,6 +172,14 @@
     </div>
 
 </main>
+
+<div class="container mt-5">
+    <div th:each="el : ${comments}" class="alert alert-info mt-2">
+        <!--<h3 th:text="${el.id}"/>-->
+        <h3 th:text="${el.username}"/>
+        <p th:text="${el.text}"/>
+    </div>
+</div>
 
 <footer th:insert="blocks/footer :: footer"></footer>
 
