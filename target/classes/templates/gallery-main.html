@@ -83,8 +83,8 @@
 
 <div class="container mt-5" id="comm">
     <div th:each="el : ${comments}" class="alert alert-info mt-2">
-        <h3 th:utext="${el.username}"/>
-        <p th:utext="${el.CommentText}"/>
+        <h3 th:text="${el.username}"/>
+        <p th:text="${el.CommentText}"/>
     </div>
 </div>
 
