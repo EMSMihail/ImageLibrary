@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script ENGINE="text/javascript" src="https://code.jquery.com/jquery-1.11.2.js "></script>
     <style type="text/css">
         body{
             background: #8350a3;
@@ -55,6 +56,7 @@
         div#carousel ~ span:hover { color: #888; cursor: pointer; }
 
     </style>
+
 </head>
 <body>
 
@@ -91,22 +93,21 @@
 <div class="container mt-5">
     <table>
         <tr th:each="el : ${comments}" class="alert alert-info mt-2">
-            <td th:text="${el.username}">Username</td>
-            <td th:text="${el.CommentText}">Comment</td>
+            <td th:utext="${el.username}">Username</td>
+            <td th:utext="${el.CommentText}">Comment</td>
         </tr>
     </table>
 </div>
 
 <div class="container mt-5 mb-5">
     <h1>Leave a comment</h1>
-    <form method="post">
+    <form id="comment">
         <input type="text" name="username" placeholder="Input your Username" class="form-control">
         <textarea name="CommentText" placeholder="Leave your comment here" class="form-control"></textarea>
-        <input type="hidden" name="_csrf" value="${_csrf.token}" />
+<!--        <input type="hidden" name="_csrf" value="${_csrf.token}" />-->
         <button type="submit" class="btn alert-info mt-2" placeholder="Submit">Submit</button>
     </form>
 </div>
-
 
 <footer th:insert="blocks/footer :: footer"></footer>
 
@@ -118,5 +119,55 @@
         spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
     }
 </script>
+<!--<script>-->
+<!--    $(document).ready(function () {-->
+<!--        var comment = $('form#enquiry textarea'),-->
+<!--            counter = '',-->
+<!--            counterValue = 140, //change this to set the max character count-->
+<!--            minCommentLength = 10, //set minimum comment length-->
+<!--            $commentValue = comment.val(),-->
+<!--            $commentLength = $commentValue.length,-->
+<!--            submitButton = $('form#enquiry input[type=submit]').hide();-->
+
+<!--        $('form').prepend('<span class="counter"></span>').append('<p class="info">Min length: <span></span></p>');-->
+<!--        counter = $('span.counter');-->
+<!--        counter.html(counterValue); //display your set max length-->
+<!--        comment.attr('maxlength', counterValue); //apply max length to textarea-->
+<!--        $('form').find('p.info > span').html(minCommentLength);-->
+<!--        // everytime a key is pressed inside the textarea, update counter-->
+<!--        comment.keyup(function () {-->
+<!--            var $this = $(this);-->
+<!--            $commentLength = $this.val().length; //get number of characters-->
+<!--            counter.html(counterValue - $commentLength); //update counter-->
+<!--            if ($commentLength > minCommentLength - 1) {-->
+<!--                submitButton.fadeIn(200);-->
+<!--            } else {-->
+<!--                submitButton.fadeOut(200);-->
+<!--            }-->
+<!--        });-->
+
+
+<!--    });-->
+
+<!--</script>-->
+<script>
+    $(document).ready(function() {
+        $("#comment").submit(function () { //устанавливаем событие отправки для формы с id=form
+            var form_data = $(this).serialize(); //собераем все данные из формы
+            $.ajax({
+                type: "POST", //Метод отправки
+                url: "/addComment", //путь до php фаила отправителя
+                data: form_data,
+                success: function () {
+                    //код в этом блоке выполняется при успешной отправке сообщения
+                    alert("Ваше сообщение отпрвлено!");
+                }
+            });
+        });
+    });
+
+</script>
+
+
 </body>
 </html>

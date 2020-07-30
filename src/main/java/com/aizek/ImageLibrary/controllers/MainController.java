@@ -29,12 +29,14 @@ public class MainController {
         return "gallery-main";
     }
 
-    @PostMapping(value = "/")
+    @PostMapping(value = "/addComment")
     public String CommentAdd(@RequestParam String username, @RequestParam String CommentText, Model model) {
         Comment comment = new Comment(username, CommentText);
         CommentRepository.save(comment);
+        System.out.println("username : "+username+"  comment: "+CommentText);
         return "redirect:/";
     }
+
 
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public String adminPage(Model model, Principal principal) {
