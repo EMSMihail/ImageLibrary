@@ -1,16 +1,20 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html xmlns:th="http://www.thymeleaf.org">
+      <!--xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">   -->
 <head>
     <title th:text="${title}"/>
+    <!--
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <style type="text/css">
-        div#carousel {
-            perspective: 2000px;
+        body{
             background: #8350a3;
             background: -webkit-gradient(linear, left top, right bottom, from(#50a3a2), to(#c953e3));
             background: linear-gradient(to bottom right, #50a3a2 0%, #a053e3 100%);
+        }
+        div#carousel {
+            perspective: 2000px;
             padding-top: 5%;
             font-size:0;
             margin-bottom: 2rem;
@@ -49,6 +53,7 @@
             border-bottom: none;
             line-height: 0; }
         div#carousel ~ span:hover { color: #888; cursor: pointer; }
+
     </style>
 </head>
 <body>
@@ -75,13 +80,33 @@
 <!--            ТЕЛО (ЦЕТРАЛЬНАЯ ЧАСТЬ)         -->
 
 <!--
-<div class="container mt-5">
+<div class="container mt-5" id="comm">
     <div th:each="el : ${comments}" class="alert alert-info mt-2">
         <h3 th:text="${el.username}"/>
-        <p th:text="${el.text}"/>
+        <p th:text="${el.CommentText}"/>
     </div>
 </div>
 -->
+
+<div class="container mt-5">
+    <table>
+        <tr th:each="el : ${comments}" class="alert alert-info mt-2">
+            <td th:text="${el.username}">Username</td>
+            <td th:text="${el.CommentText}">Comment</td>
+        </tr>
+    </table>
+</div>
+
+<div class="container mt-5 mb-5">
+    <h1>Leave a comment</h1>
+    <form method="post">
+        <input type="text" name="username" placeholder="Input your Username" class="form-control">
+        <textarea name="CommentText" placeholder="Leave your comment here" class="form-control"></textarea>
+        <input type="hidden" name="_csrf" value="${_csrf.token}" />
+        <button type="submit" class="btn alert-info mt-2" placeholder="Submit">Submit</button>
+    </form>
+</div>
+
 
 <footer th:insert="blocks/footer :: footer"></footer>
 

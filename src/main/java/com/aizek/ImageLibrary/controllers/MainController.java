@@ -2,21 +2,38 @@ package com.aizek.ImageLibrary.controllers;
 
 import java.security.Principal;
 
+import com.aizek.ImageLibrary.models.Comment;
+import com.aizek.ImageLibrary.repo.CommentRepository;
 import com.aizek.ImageLibrary.utils.WebUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MainController {
 
-    @RequestMapping(value = { "/", "/welcome" }, method = RequestMethod.GET)
+    @Autowired
+    private com.aizek.ImageLibrary.repo.CommentRepository CommentRepository;
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String welcomePage(Model model) {
         model.addAttribute("title", "Welcome");
+        Iterable<Comment> comments = CommentRepository.findAll();
+        model.addAttribute("comments", comments);
         return "gallery-main";
+    }
+
+    @PostMapping(value = "/")
+    public String CommentAdd(@RequestParam String username, @RequestParam String CommentText, Model model) {
+        Comment comment = new Comment(username, CommentText);
+        CommentRepository.save(comment);
+        return "redirect:/";
     }
 
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
