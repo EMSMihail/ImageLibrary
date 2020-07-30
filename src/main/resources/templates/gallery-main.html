@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title th:text="${title}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style type="text/css">
+        div#carousel {
+            perspective: 2000px;
+            background: #8350a3;
+            background: -webkit-gradient(linear, left top, right bottom, from(#50a3a2), to(#c953e3));
+            background: linear-gradient(to bottom right, #50a3a2 0%, #a053e3 100%);
+            padding-top: 5%;
+            font-size:0;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        figure#spinner {
+            transform-style: preserve-3d;
+            height: 500px;
+            transform-origin: 50% 50% -500px;
+            transition: 1s;
+        }
+        figure#spinner img {
+            width: 40%; max-width: 600px;
+            position: absolute; left: 30%;
+            transform-origin: 50% 50% -625px;
+            outline:1px solid transparent;
+        }
+        figure#spinner img:nth-child(1) { transform:rotateY(0deg);
+        }
+        figure#spinner img:nth-child(2) { transform: rotateY(-45deg); }
+        figure#spinner img:nth-child(3) { transform: rotateY(-90deg); }
+        figure#spinner img:nth-child(4) { transform: rotateY(-135deg); }
+        figure#spinner img:nth-child(5){ transform: rotateY(-180deg); }
+        figure#spinner img:nth-child(6){ transform: rotateY(-225deg); }
+        figure#spinner img:nth-child(7){ transform: rotateY(-270deg); }
+        figure#spinner img:nth-child(8){ transform: rotateY(-315deg); }
+        div#carousel ~ span {
+            color: #fff;
+            margin: 5%;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 2rem;
+            transition: 0.6s color;
+            position: relative;
+            margin-top: -6rem;
+            border-bottom: none;
+            line-height: 0; }
+        div#carousel ~ span:hover { color: #888; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<header th:insert="blocks/header :: header"></header>
+
+<!--                Carousel of Images          -->
+<div id="carousel">
+    <figure id="spinner">
+        <img class="gallery-image" src="https://images.unsplash.com/photo-1514041181368-bca62cceffcd?w=800&h=600&fit=crop" alt="car interior from central back seat position showing driver and blurred view through windscreen of a busy road at night">
+        <img class="gallery-image" src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=800&h=600&fit=crop" alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan">
+        <img class="gallery-image" src="https://images.unsplash.com/photo-1445810694374-0a94739e4a03?w=800&h=600&fit=crop" alt="back view of woman wearing a backpack and beanie waiting to cross the road on a busy street at night in New York City, USA">
+        <img class="gallery-image" src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&h=600&fit=crop" alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer">
+        <img class="gallery-image" src="https://images.unsplash.com/photo-1515260268569-9271009adfdb?w=800&h=600&fit=crop" alt="sunset behind San Francisco city skyline">
+        <img class="gallery-image" src="https://images.unsplash.com/photo-1486334803289-1623f249dd1e?w=800&h=600&fit=crop" alt="man wearing a black jacket, white shirt, blue jeans, and brown boots, playing a white electric guitar while sitting on an amp">
+        <img class="gallery-image" src="https://images.unsplash.com/photo-1596024480680-a65f6510e1d8?w=800&h=600&fit=crop">
+        <img class="gallery-image" src="https://images.unsplash.com/photo-1595912587923-bdffd4564f33?w=800&h=600&fit=crop">
+    </figure>
+</div>
+<span style="float:left" class="ss-icon" onclick="galleryspin('-')">&lt;</span>
+<span style="float:right" class="ss-icon" onclick="galleryspin('')">&gt;</span>
+
+
+<!--            ТЕЛО (ЦЕТРАЛЬНАЯ ЧАСТЬ)         -->
+
+<!--
+<div class="container mt-5">
+    <div th:each="el : ${comments}" class="alert alert-info mt-2">
+        <h3 th:text="${el.username}"/>
+        <p th:text="${el.text}"/>
+    </div>
+</div>
+-->
+
+<footer th:insert="blocks/footer :: footer"></footer>
+
+<script language="JavaScript">
+    var angle = 0;
+    function galleryspin(sign) {
+        spinner = document.querySelector("#spinner");
+        if (!sign) { angle = angle + 45; } else { angle = angle - 45; }
+        spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
+    }
+</script>
+</body>
+</html>

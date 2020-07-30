@@ -16,8 +16,7 @@ public class MainController {
     @RequestMapping(value = { "/", "/welcome" }, method = RequestMethod.GET)
     public String welcomePage(Model model) {
         model.addAttribute("title", "Welcome");
-        model.addAttribute("message", "This is welcome page!");
-        return "welcomePage";
+        return "gallery-main";
     }
 
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
@@ -34,7 +33,7 @@ public class MainController {
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String loginPage(Model model) {
 
-        return "loginPage";
+        return "login";
     }
 
     @RequestMapping(value = "/logoutSuccessful", method = RequestMethod.GET)
@@ -79,28 +78,3 @@ public class MainController {
     }
 
 }
-
-
-/**
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-
-@Controller
-public class MainController {
-
-    /**@GetMapping("/")
-    public String home(Model model) {
-    model.addAttribute("title", "Главная страница");
-    return "home";
-    }*/
-
-    /**@GetMapping("/about")
-    public String about(Model model) {
-    model.addAttribute("title", "Про нас");
-    return "about";
-    }*/
-
-
-/**
-}*/

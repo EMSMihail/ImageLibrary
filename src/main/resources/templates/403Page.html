@@ -1,12 +1,60 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <title>Access Denied</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style type="text/css">
+        div#carousel {
+            perspective: 2000px;
+            background: #8350a3;
+            background: -webkit-gradient(linear, left top, right bottom, from(#50a3a2), to(#c953e3));
+            background: linear-gradient(to bottom right, #50a3a2 0%, #a053e3 100%);
+            padding-top: 5%;
+            font-size:0;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        figure#spinner {
+            transform-style: preserve-3d;
+            height: 500px;
+            transform-origin: 50% 50% -500px;
+            transition: 1s;
+        }
+        figure#spinner img {
+            width: 40%; max-width: 600px;
+            position: absolute; left: 30%;
+            transform-origin: 50% 50% -625px;
+            outline:1px solid transparent;
+        }
+        figure#spinner img:nth-child(1) { transform:rotateY(0deg);
+        }
+        figure#spinner img:nth-child(2) { transform: rotateY(-45deg); }
+        figure#spinner img:nth-child(3) { transform: rotateY(-90deg); }
+        figure#spinner img:nth-child(4) { transform: rotateY(-135deg); }
+        figure#spinner img:nth-child(5){ transform: rotateY(-180deg); }
+        figure#spinner img:nth-child(6){ transform: rotateY(-225deg); }
+        figure#spinner img:nth-child(7){ transform: rotateY(-270deg); }
+        figure#spinner img:nth-child(8){ transform: rotateY(-315deg); }
+        div#carousel ~ span {
+            color: #fff;
+            margin: 5%;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 2rem;
+            transition: 0.6s color;
+            position: relative;
+            margin-top: -6rem;
+            border-bottom: none;
+            line-height: 0; }
+        div#carousel ~ span:hover { color: #888; cursor: pointer; }
+    </style>
 </head>
 
 <body>
-<!-- Include _menu.html -->
-<th:block th:include="/_menu"></th:block>
+
+<header th:insert="blocks/header :: header"></header>
 
 <h3 th:if="${message != null}" th:utext="${message}" style="color: red;"></h3>
 
